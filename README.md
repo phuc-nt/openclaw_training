@@ -1,75 +1,87 @@
 # Training AI Agent Cho Team Marketing & Sales
 
-> Tài liệu training dựa trên kinh nghiệm vận hành thực tế từ 2026-02-14 đến nay.
-> Bao gồm 2 hướng triển khai: **OpenClaw (self-hosted)** và **Claude Desktop (Cowork)**.
+> Tài liệu giúp team MKT & Sales bắt đầu sử dụng AI agent — từ hiểu khái niệm, chọn giải pháp, đến vận hành thực tế.
 
-**Slide thuyết trình**: [https://phuc-nt.github.io/openclaw_training/slides.html](https://phuc-nt.github.io/openclaw_training/slides.html)
-
----
-
-## Cấu trúc tài liệu
-
-```
-├── README.md                     ← File này — tổng quan & mục lục
-├── sharing-overview.md           ← Buổi sharing overview: so sánh 2 hướng triển khai
-├── slides.html                   ← Slide thuyết trình (Reveal.js, mở bằng browser)
-├── overview-and-discovery.md     ← Giới thiệu & khảo sát trước training
-├── roles-and-structure.md        ← Cấu trúc team: Admin vs User, ai cần biết gì
-│
-├── modules/
-│   ├── 01-infrastructure.md      ← Module 1: Cài đặt & bảo mật (dành cho Admin)
-│   ├── 02-agent-concepts.md      ← Module 2: Hiểu cách agent hoạt động (cả team)
-│   ├── 03-core-agents.md         ← Module 3: Các agent thực chiến (cả team)
-│   ├── 04-daily-operations.md    ← Module 4: Vận hành hàng ngày (cả team)
-│   └── 05-workshop.md            ← Workshop: tự viết SOUL.md cho use case của mình
-│
-└── use-cases/
-    ├── immediate.md              ← Use cases có thể làm ngay
-    └── roadmap.md                ← Roadmap mở rộng (cần thêm skill/script)
-```
+**Slide thuyết trình**: [mở slides](https://phuc-nt.github.io/openclaw_training/slides.html)
 
 ---
 
-## Lộ trình
+## Đọc theo thứ tự nào?
 
-### Buổi 0 — Sharing Overview *(cả team, ~1.5 giờ)*
-Giới thiệu AI agent, demo trực tiếp, so sánh 2 hướng triển khai để team chọn hướng phù hợp.
-→ Xem `sharing-overview.md` hoặc [mở slides](https://phuc-nt.github.io/openclaw_training/slides.html)
+### Bước 1 — Hiểu & Chọn giải pháp
 
-### Nếu chọn OpenClaw (self-hosted) — ~12-14 giờ
+> Dành cho **tất cả mọi người** — không cần biết kỹ thuật.
 
-| Buổi | Đối tượng | Nội dung | Thời lượng |
-|------|-----------|----------|------------|
-| 1 | Admin only | Module 1: Infrastructure | 3-4 giờ |
-| 2 | Cả team | Module 2: Hiểu agent + SOUL.md | 2 giờ |
-| 3 | Cả team | Module 3: Demo các agent thực chiến | 3 giờ |
-| 4 | Cả team | Module 4: Vận hành + troubleshoot cơ bản | 1.5 giờ |
-| 5 | Cả team | Workshop: tự design agent cho use case của mình | 2-3 giờ |
+| Thứ tự | Tài liệu | Nội dung | Thời gian đọc |
+|---|---|---|---|
+| 1 | [AI Agent là gì?](01-overview/ai-agent-intro.md) | AI agent khác ChatGPT thế nào, giúp gì cho MKT & Sales | 5 phút |
+| 2 | [So sánh 3 giải pháp](01-overview/solution-comparison.md) | Claude Desktop + ClaudeKit, GoClaw Enterprise, OpenClaw — ai nên chọn gì | 15 phút |
+| 3 | [Khảo sát trước training](01-overview/pre-training-survey.md) | 20 câu hỏi để điều chỉnh nội dung training cho phù hợp | 10 phút |
 
-### Nếu chọn Claude Desktop (Cowork) — ~4-6 giờ
-Training nhẹ hơn, tập trung vào cách viết instruction và workflow thực tế.
+### Bước 2 — Training OpenClaw (nếu chọn self-hosted)
 
-### Kết hợp cả hai
-Training cả hai hướng, ưu tiên theo nhu cầu team.
+> Dành cho team chọn hướng tự vận hành. Cần 1 Admin biết kỹ thuật cơ bản.
+
+| Buổi | Tài liệu | Đối tượng | Thời lượng |
+|---|---|---|---|
+| — | [Vai trò Admin vs User](02-openclaw-training/roles-and-structure.md) | Cả team | Đọc trước |
+| 1 | [Module 1: Cài đặt & bảo mật](02-openclaw-training/01-infrastructure.md) | Admin only | 3-4 giờ |
+| 2 | [Module 2: Hiểu cách agent hoạt động](02-openclaw-training/02-agent-concepts.md) | Cả team | 2 giờ |
+| 3 | [Module 3: Demo agent thực chiến](02-openclaw-training/03-core-agents.md) | Cả team | 3 giờ |
+| 4 | [Module 4: Vận hành hàng ngày](02-openclaw-training/04-daily-operations.md) | Cả team | 1.5 giờ |
+| 5 | [Module 5: Workshop tự thiết kế agent](02-openclaw-training/05-workshop.md) | Cả team | 2-3 giờ |
+
+### Bước 3 — Ý tưởng use case
+
+> Dùng để chọn việc nào nên giao cho agent trước.
+
+| Tài liệu | Nội dung |
+|---|---|
+| [Use cases làm ngay](03-use-cases/immediate.md) | 6 use case triển khai được ngay: monitor đối thủ, trend digest, báo cáo campaign... |
+| [Roadmap mở rộng](03-use-cases/roadmap.md) | Use case nâng cao cần thêm thời gian: GA4 auto-report, Shopee review monitor... |
 
 ---
 
-## Điều kiện tiên quyết
+## 3 Giải pháp tóm tắt
 
-**OpenClaw:**
-- Có **1 người Admin** biết code cơ bản (đọc/sửa Python, dùng terminal) — xem `roles-and-structure.md`
-- Phần cứng: Mac mini hoặc máy chạy macOS 24/7 (hoặc Linux server)
-- Tài khoản: Anthropic API key, Telegram bot token
-- Tùy chọn: OpenRouter API key (để dùng Gemini, Kimi — rẻ hơn cho các task đơn giản)
-
-**Claude Desktop:**
-- Mỗi người cài Claude Desktop trên máy cá nhân
-- Subscription: Pro ($20/tháng) hoặc Max ($100-200/tháng) per person
+| | **Claude Desktop + ClaudeKit** | **GoClaw Enterprise** | **OpenClaw Self-hosted** |
+|---|---|---|---|
+| **Phù hợp** | Cá nhân, team nhỏ | Agency, doanh nghiệp 10+ người | Team có IT, muốn kiểm soát toàn bộ |
+| **Setup** | 30 phút | 1-2 ngày (Digitop hỗ trợ) | 1-2 tuần |
+| **Chi phí/tháng (5 người)** | $100-1,000 | ~5-7 triệu VND | $30-150 |
+| **Cần kỹ thuật?** | Không | Không (có hỗ trợ) | Cần 1 Admin |
+| **Chi tiết** | [Xem so sánh](01-overview/solution-comparison.md) | [Xem so sánh](01-overview/solution-comparison.md) | [Xem so sánh](01-overview/solution-comparison.md) |
 
 ---
 
 ## Nguyên tắc quan trọng nhất
 
-> **Khoảng cách lớn nhất không phải kỹ thuật — mà là khả năng mô tả công việc của mình thành SOUL.md.**
+> **Khoảng cách lớn nhất không phải kỹ thuật — mà là khả năng mô tả công việc của mình thành instruction cho AI.**
 
-Một agent hoạt động tốt hay không phụ thuộc 80% vào cách viết instruction (SOUL.md, TOOLS.md, SKILL.md), không phải vào code hay model. Đây là kỹ năng cần đầu tư nhiều nhất khi training.
+Agent hoạt động tốt hay không phụ thuộc **80% vào cách viết instruction**, không phải vào công nghệ. Đây là kỹ năng quan trọng nhất cần học trong training.
+
+---
+
+## Cấu trúc thư mục
+
+```
+├── README.md                      ← File này
+├── slides.html                    ← Slide thuyết trình (Reveal.js, mở bằng browser)
+│
+├── 01-overview/                   ← Hiểu AI agent & chọn giải pháp
+│   ├── ai-agent-intro.md
+│   ├── solution-comparison.md
+│   └── pre-training-survey.md
+│
+├── 02-openclaw-training/          ← Giáo trình OpenClaw self-hosted (5 modules)
+│   ├── roles-and-structure.md
+│   ├── 01-infrastructure.md
+│   ├── 02-agent-concepts.md
+│   ├── 03-core-agents.md
+│   ├── 04-daily-operations.md
+│   └── 05-workshop.md
+│
+└── 03-use-cases/                  ← Ý tưởng use case cho MKT & Sales
+    ├── immediate.md
+    └── roadmap.md
+```
